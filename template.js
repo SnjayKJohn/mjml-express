@@ -3,8 +3,8 @@ exports.hbsTemplate = `
   <mj-head>
     <mj-breakpoint width="320px" />
   </mj-head>
-  <mj-body>
-    <mj-wrapper>
+  <mj-body width="800px">
+    <mj-wrapper width="800px">
       <mj-section>
         <mj-column>
           <mj-text>
@@ -70,16 +70,16 @@ exports.hbsTemplate = `
       <mj-section>
         <mj-column>
           {{#if assignee}}
-            <mj-text font-size="16px" align="center" color="#909090">
+            <mj-text font-size="16px" line-height="20px" align="center" color="#909090">
               Assigned To : {{assignee.name}} ( <a href="tel:{{assignee.mobile}}">{{assignee.mobile}}</a> ) at ____
             </mj-text>
           {{/if}}
           {{#if requestedBy}}
-            <mj-text font-size="16px" align="center" color="#909090">
+            <mj-text font-size="16px" line-height="20px" align="center" color="#909090">
               Requested By : {{requestedBy.name}} ( <a href="tel:{{requestedBy.mobile}}">{{requestedBy.mobile}}</a> ) at {{formatDate createdAt}}
             </mj-text>
           {{else}}
-            <mj-text font-size="16px" align="center" color="#909090">
+            <mj-text font-size="16px" line-height="20px" align="center" color="#909090">
               Requested By : QR Scanned ( <a href="tel:{{requestedMobile}}">{{requestedMobile}}</a> ) at {{formatDate createdAt}}
             </mj-text>
           {{/if}}
@@ -101,7 +101,7 @@ exports.hbsTemplate = `
               </mj-text>
             </mj-column>
             <mj-column width="85%">
-              <mj-text font-size="14px" align="left">
+              <mj-text font-size="14px" line-height="20px" align="left">
                 <strong>{{comment.commenter.name}} </strong>- {{formatDate comment.createdAt}}
               </mj-text>
               <mj-text font-size="14px" align="left" font-weight="100" padding-top="0px">
